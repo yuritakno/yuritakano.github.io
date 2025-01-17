@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WASSEDA - Equipamentos para Avicultura</title>
+    <style>
+        /* Configuração Geral */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        .header-container {
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: #004b8d;
+            padding: 20px;
+            color: white;
+            border-bottom: 4px solid #ff6f00;
+        }
+        .logo-container h1 {
+            font-size: 80px;
+            font-weight: bold;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        .frase-destaque h2 {
+            font-size: 28px;
+            margin: 15px 0;
+        }
+        .frase-destaque p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Contatos */
+        .contact-info {
+            text-align: center;
+            margin: 30px 10%;
+        }
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #004b8d;
+        }
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-item {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .contact-item i {
+            margin-right: 10px;
+        }
+
+        /* Produtos */
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 25%;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .product h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #004b8d;
+        }
+        .quantity-selector {
+            margin: 15px 0;
+        }
+        .negotiate-button {
+            background-color: #ff6f00;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .negotiate-button:hover {
+            background-color: #f25c00;
+        }
+
+        /* Remover as setas do campo de número */
+        input[type="number"] {
+            -moz-appearance: textfield;
+            -webkit-appearance: none;
+            appearance: none;
+            padding: 8px;
+            font-size: 16px;
+            width: 100px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="number"]:focus {
+            border-color: #ff6f00;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <div class="header-container">
+        <div class="logo-container">
+            <h1 class="logo-text">WASSEDA</h1>
+        </div>
+        <div class="frase-destaque">
+            <h2>Equipamentos para Avicultura</h2>
+            <p>Com a Wasseda, você encontra qualidade, inovação e excelência no fornecimento de equipamentos para avicultura. Nosso compromisso é proporcionar o melhor para o seu negócio, com soluções completas e atendimento personalizado.</p>
+        </div>
+    </div>
+
+    <!-- Produtos -->
+    <div class="product-container">
+        <!-- Produto 1 -->
+        <div class="product">
+            <h3>100x45x40 Gaiola de Postura</h3>
+            <p id="price100x45x40">R$ 100,00</p>
+            <div class="quantity-selector">
+                <input type="number" id="quantity100x45x40" min="1" value="1" oninput="calcularPreco('100x45x40')">
+                <select id="unitOrLot100x45x40" onchange="calcularPreco('100x45x40')">
+                    <option value="unidade">Unidade</option>
+                    <option value="lote">Lote (10 unidades)</option>
+                </select>
+                <span id="precoCalculado100x45x40"></span>
+            </div>
+            <a href="https://wa.me/5518997653955?text=Olá,%20quero%20negociar%20sobre%20o%20produto%20100x45x40%20Gaiola%20de%20Postura%20-%20Preço%20calculado%20R$%20" id="whatsapp-link100x45x40">
+                <button class="negotiate-button">Conversar com o Vendedor (Osvino)</button>
+            </a>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="product">
+            <h3>100x50x40 Gaiola de Postura</h3>
+            <p id="price100x50x40">R$ 104,00</p>
+            <div class="quantity-selector">
+                <input type="number" id="quantity100x50x40" min="1" value="1" oninput="calcularPreco('100x50x40')">
+                <select id="unitOrLot100x50x40" onchange="calcularPreco('100x50x40')">
+                    <option value="unidade">Unidade</option>
+                    <option value="lote">Lote (10 unidades)</option>
+                </select>
+                <span id="precoCalculado100x50x40"></span>
+            </div>
+            <a href="https://wa.me/5518997653955?text=Olá,%20quero%20negociar%20sobre%20o%20produto%20100x50x40%20Gaiola%20de%20Postura%20-%20Preço%20calculado%20R$%20" id="whatsapp-link100x50x40">
+                <button class="negotiate-button">Conversar com o Vendedor (Osvino)</button>
+            </a>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="product">
+            <h3>100x50x50 Gaiola de Criação</h3>
+            <p id="price100x50x50">R$ 110,00</p>
+            <div class="quantity-selector">
+                <input type="number" id="quantity100x50x50" min="1" value="1" oninput="calcularPreco('100x50x50')">
+                <select id="unitOrLot100x50x50" onchange="calcularPreco('100x50x50')">
+                    <option value="unidade">Unidade</option>
+                    <option value="lote">Lote (10 unidades)</option>
+                </select>
+                <span id="precoCalculado100x50x50"></span>
+            </div>
+            <a href="https://wa.me/5518997653955?text=Olá,%20quero%20negociar%20sobre%20o%20produto%20100x50x50%20Gaiola%20de%20Criação%20-%20Preço%20calculado%20R$%20" id="whatsapp-link100x50x50">
+                <button class="negotiate-button">Conversar com o Vendedor (Osvino)</button>
+            </a>
+        </div>
+
+        <!-- Produto 4 -->
+        <div class="product">
+            <h3>100x60x35 Gaiola de Criação</h3>
+            <p id="price100x60x35">R$ 132,00</p>
+            <div class="quantity-selector">
+                <input type="number" id="quantity100x60x35" min="1" value="1" oninput="calcularPreco('100x60x35')">
+                <select id="unitOrLot100x60x35" onchange="calcularPreco('100x60x35')">
+                    <option value="unidade">Unidade</option>
+                    <option value="lote">Lote (10 unidades)</option>
+                </select>
+                <span id="precoCalculado100x60x35"></span>
+            </div>
+            <a href="https://wa.me/5518997653955?text=Olá,%20quero%20negociar%20sobre%20o%20produto%20100x60x35%20Gaiola%20de%20Criação%20-%20Preço%20calculado%20R$%20" id="whatsapp-link100x60x35">
+                <button class="negotiate-button">Conversar com o Vendedor (Osvino)</button>
+            </a>
+        </div>
+
+        <!-- Produto 5 -->
+        <div class="product">
+            <h3>50x60x40 Gaiola de Criação</h3>
+            <p id="price50x60x40">R$ 75,00</p>
+            <div class="quantity-selector">
+                <input type="number" id="quantity50x60x40" min="1" value="1" oninput="calcularPreco('50x60x40')">
+                <select id="unitOrLot50x60x40" onchange="calcularPreco('50x60x40')">
+                    <option value="unidade">Unidade</option>
+                    <option value="lote">Lote (10 unidades)</option>
+                </select>
+                <span id="precoCalculado50x60x40"></span>
+            </div>
+            <a href="https://wa.me/5518997653955?text=Olá,%20quero%20negociar%20sobre%20o%20produto%2050x60x40%20Gaiola%20de%20Criação%20-%20Preço%20calculado%20R$%20" id="whatsapp-link50x60x40">
+                <button class="negotiate-button">Conversar com o Vendedor (Osvino)</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Contatos -->
+    <div class="contact-info">
+        <h3>Entre em Contato</h3>
+        <div class="contact-list">
+            <div class="contact-item">
+                <i class="fa fa-phone"></i>
+                <span>+55 18 99765-3955</span>
+            </div>
+            <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <span>osvinosilveira@gmail.com</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcularPreco(produto) {
+            let quantidade = document.getElementById(`quantity${produto}`).value;
+            let unidadeOuLote = document.getElementById(`unitOrLot${produto}`).value;
+            let precoUnitario = parseFloat(document.getElementById(`price${produto}`).innerText.replace('R$', '').trim());
+
+            let precoTotal = 0;
+            if (unidadeOuLote === 'unidade') {
+                precoTotal = precoUnitario * quantidade;
+            } else if (unidadeOuLote === 'lote') {
+                precoTotal = precoUnitario * 10 * quantidade;
+            }
+
+            document.getElementById(`precoCalculado${produto}`).innerText = `Preço Total: R$ ${precoTotal.toFixed(2)}`;
+            document.getElementById(`whatsapp-link${produto}`).href = `https://wa.me/5518997653955?text=Olá,%20quero%20negociar%20sobre%20o%20produto%20${produto}%20-%20Preço%20calculado%20R$%20${precoTotal.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WASSEDA - Equipamentos para Avicultura</title>
+    <style>
+        /* Configuração Geral */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        .header-container {
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: #004b8d;
+            padding: 20px;
+            color: white;
+            border-bottom: 4px solid #ff6f00;
+        }
+        .logo-container h1 {
+            font-size: 80px;
+            font-weight: bold;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        .frase-destaque h2 {
+            font-size: 28px;
+            margin: 15px 0;
+        }
+        .frase-destaque p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Contatos */
+        .contact-info {
+            text-align: center;
+            margin: 30px 10%;
+        }
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #004b8d;
+        }
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-item {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .contact-item i {
+            margin-right: 10px;
+        }
+
+        /* Produtos */
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 25%;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .product h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #004b8d;
+        }
+        .quantity-selector {
+            margin: 15px 0;
+        }
+        .negotiate-button {
+            background-color: #ff6f00;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .negotiate-button:hover {
+            background-color: #f25c00;
+        }
+
+        /* Remover as setas do campo de número */
+        input[type="number"] {
+            -moz-appearance: textfield;
+            -webkit-appearance: none;
+            appearance: none;
+            padding: 8px;
+            font-size: 16px;
+            width: 100px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="number"]:focus {
+            border-color: #ff6f00;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <div class="header-container">
+        <div class="logo-container">
+            <h1 class="logo-text">WASSEDA</h1>
+        </div>
+        <div class="frase-destaque">
+            <h2>Equipamentos para Avicultura</h2>
+            <p>Com a Wasseda, você encontra qualidade, inovação e excelência no fornecimento de equipamentos para avicultura. Nosso compromisso é proporcionar o melhor para o seu negócio, com soluções completas e atendimento personalizado.</p>
+        </div>
+    </div>
+
+    <!-- Produtos -->
+    <div class="product-container">
+        <!-- Produto 1 -->
+        <div class="product">
+            <h3>100x45x40 Gaiola de Postura</h3>
+            <p id="price100x45x40">R$ 100,00</p>
+            <div class="quantity-selector">
+                <input type="number" id="quantity100x45x40" min="1" value="1" oninput="calcularPreco('100x45x40')">
+                <select id="unitOrLot100x45x40" onchange="calcularPreco('100x45x40')">
+                    <option value="unidade">Unidade</option>
+                    <option value="lote">Lote (10 unidades)</option>
+                </select>
+                <span id="precoCalculado100x45x40"></span>
+            </div>
+            <a href="https://wa.me/5518997653955?text=Olá,%20quero%20negociar%20sobre%20o%20produto%20100x45x40%20Gaiola%20de%20Postura%20-%20Preço%20calculado%20R$%20" id="whatsapp-link100x45x40">
+                <button class="negotiate-button">Conversar com o Vendedor (Osvino)</button>
+            </a>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="product">
+            <h3>100x50x40 Gaiola de Postura</h3>
+            <p id="price100x50x40">R$ 104,00</p>
+            <div class="quantity-selector">
+                <input type="number" id="quantity100x50x40" min="1" value="1" oninput="calcularPreco('100x50x40')">
+                <select id="unitOrLot100x50x40" onchange="calcularPreco('100x50x40')">
+                    <option value="unidade">Unidade</option>
+                    <option value="lote">Lote (10 unidades)</option>
+                </select>
+                <span id="precoCalculado100x50x40"></span>
+            </div>
+            <a href="https://wa.me/5518997653955?text=Olá,%20quero%20negociar%20sobre%20o%20produto%20100x50x40%20Gaiola%20de%20Postura%20-%20Preço%20calculado%20R$%20" id="whatsapp-link100x50x40">
+                <button class="negotiate-button">Conversar com o Vendedor (Osvino)</button>
+            </a>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="product">
+            <h3>100x50x50 Gaiola de Criação</h3>
+            <p id="price100x50x50">R$ 110,00</p>
+            <div class="quantity-selector">
+                <input type="number" id="quantity100x50x50" min="1" value="1" oninput="calcularPreco('100x50x50')">
+                <select id="unitOrLot100x50x50" onchange="calcularPreco('100x50x50')">
+                    <option value="unidade">Unidade</option>
+                    <option value="lote">Lote (10 unidades)</option>
+                </select>
+                <span id="precoCalculado100x50x50"></span>
+            </div>
+            <a href="https://wa.me/5518997653955?text=Olá,%20quero%20negociar%20sobre%20o%20produto%20100x50x50%20Gaiola%20de%20Criação%20-%20Preço%20calculado%20R$%20" id="whatsapp-link100x50x50">
+                <button class="negotiate-button">Conversar com o Vendedor (Osvino)</button>
+            </a>
+        </div>
+
+        <!-- Produto 4 -->
+        <div class="product">
+            <h3>100x60x35 Gaiola de Criação</h3>
+            <p id="price100x60x35">R$ 132,00</p>
+            <div class="quantity-selector">
+                <input type="number" id="quantity100x60x35" min="1" value="1" oninput="calcularPreco('100x60x35')">
+                <select id="unitOrLot100x60x35" onchange="calcularPreco('100x60x35')">
+                    <option value="unidade">Unidade</option>
+                    <option value="lote">Lote (10 unidades)</option>
+                </select>
+                <span id="precoCalculado100x60x35"></span>
+            </div>
+            <a href="https://wa.me/5518997653955?text=Olá,%20quero%20negociar%20sobre%20o%20produto%20100x60x35%20Gaiola%20de%20Criação%20-%20Preço%20calculado%20R$%20" id="whatsapp-link100x60x35">
+                <button class="negotiate-button">Conversar com o Vendedor (Osvino)</button>
+            </a>
+        </div>
+
+        <!-- Produto 5 -->
+        <div class="product">
+            <h3>50x60x40 Gaiola de Criação</h3>
+            <p id="price50x60x40">R$ 75,00</p>
+            <div class="quantity-selector">
+                <input type="number" id="quantity50x60x40" min="1" value="1" oninput="calcularPreco('50x60x40')">
+                <select id="unitOrLot50x60x40" onchange="calcularPreco('50x60x40')">
+                    <option value="unidade">Unidade</option>
+                    <option value="lote">Lote (10 unidades)</option>
+                </select>
+                <span id="precoCalculado50x60x40"></span>
+            </div>
+            <a href="https://wa.me/5518997653955?text=Olá,%20quero%20negociar%20sobre%20o%20produto%2050x60x40%20Gaiola%20de%20Criação%20-%20Preço%20calculado%20R$%20" id="whatsapp-link50x60x40">
+                <button class="negotiate-button">Conversar com o Vendedor (Osvino)</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Contatos -->
+    <div class="contact-info">
+        <h3>Entre em Contato</h3>
+        <div class="contact-list">
+            <div class="contact-item">
+                <i class="fa fa-phone"></i>
+                <span>+55 18 99765-3955</span>
+            </div>
+            <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <span>osvinosilveira@gmail.com</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcularPreco(produto) {
+            let quantidade = document.getElementById(`quantity${produto}`).value;
+            let unidadeOuLote = document.getElementById(`unitOrLot${produto}`).value;
+            let precoUnitario = parseFloat(document.getElementById(`price${produto}`).innerText.replace('R$', '').trim());
+
+            let precoTotal = 0;
+            if (unidadeOuLote === 'unidade') {
+                precoTotal = precoUnitario * quantidade;
+            } else if (unidadeOuLote === 'lote') {
+                precoTotal = precoUnitario * 10 * quantidade;
+            }
+
+            document.getElementById(`precoCalculado${produto}`).innerText = `Preço Total: R$ ${precoTotal.toFixed(2)}`;
+            document.getElementById(`whatsapp-link${produto}`).href = `https://wa.me/5518997653955?text=Olá,%20quero%20negociar%20sobre%20o%20produto%20${produto}%20-%20Preço%20calculado%20R$%20${precoTotal.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+</html>
